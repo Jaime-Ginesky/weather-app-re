@@ -36,6 +36,7 @@ footer {
     width: 20em;
     height: 3em;
     color: var(--pop-text-color);
+    outline: none;
 }
 
 .search-form-submit {
@@ -82,7 +83,7 @@ footer {
     justify-content: right;
    padding-bottom: 3em;
    font-weight: 600;
-   font-size: 2.5em;
+   font-size: 4em;
  }
 
  .weather-app-details {
