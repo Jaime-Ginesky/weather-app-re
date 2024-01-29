@@ -1,0 +1,114 @@
+:root {
+    --primary-font-family: poppins; 
+    --background-color:  #e2dbea;
+    --pop-text-color: rgb(100, 62, 134);
+    --primary-color: rgb(52, 50, 48);
+}
+
+body {
+    background-color: var(--background-color)
+}
+
+header {
+    border-bottom: 1px solid var(--primary-color);
+    padding: .7em;
+}
+
+footer {
+    border-top: 1px solid var(--primary-color);
+    padding: 2em;
+}
+
+.weather-app {
+    background: rgb(157, 137, 159);
+    max-width: 60em;
+    margin: 4em auto;
+    box-shadow: 0 30px 50 px rgba(65, 50, 100, 0.08);
+    border-radius: 16px;
+    padding: 3em;
+    font-family: var(--primary-font-family);
+    color:var(--primary-color);
+}
+
+.search-form-input {
+    background: var(--background-color);
+    border-radius: 8px;
+    width: 20em;
+    height: 3em;
+    color: var(--pop-text-color);
+}
+
+.search-form-submit {
+    background-color: var(--pop-text-color);
+    border-radius: 8px;
+    width: 7em;
+    height: 3em;
+    color: rgb(221, 233, 233);
+    letter-spacing: 1px;
+}
+
+.source-code a {
+    color:var(--primary-color);
+    font-size: .5em;
+}
+
+.source-code a:hover {
+     color:azure;
+}  
+ .source-code p {
+    color: var(--primary-color);
+    font-size: .5em;
+    display: flex;
+    justify-content: center;
+ }
+
+ .title-text {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+ }
+
+ .weather-app-city {
+    font-size: 3em;
+ }
+
+ .weather-app-data {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .weather-app-temp {
+    display: flex;
+    justify-content: right;
+   padding-bottom: 3em;
+   font-weight: 600;
+   font-size: 2.5em;
+ }
+
+ .weather-app-details {
+    font-size: .7em;
+    opacity: 70%;
+    line-height: 1.4em;
+    padding-left: 4em;
+ }
+
+ .weather-app-values {
+    display:flex;
+    padding: 2em 1em; 
+ }
+
+ .weather-app-icon {
+    font-size: 2em;
+    padding-right: .4em;
+    opacity: 70%
+ }
+
+ .weather-app-unit {
+    font-size: .8em;
+    opacity: 70%;
+ }
+
+ 
+
+
+
