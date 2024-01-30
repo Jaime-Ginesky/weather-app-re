@@ -14,7 +14,7 @@
 <body>
   <div class="weather-app">
   <header>
-    <h1 class="title-text">Forecast</h1>
+    <h1 class="title-text">Daily Forecast</h1>
     <form class="search-form" id="search-form">
         <input type="search" placeholder="Enter your city" required class="search-form-input" id="search-form-input" />
         <input type="submit" value="Search" class="search-form-button" />
@@ -24,9 +24,9 @@
     <div>
      <h1 class="weather-app-city" id="city">Los Angeles</h1>
        <p class="weather-app-details">
+        <span id="description"></span>
         <span id="day"></span> 
-        <span><strong id="time"></strong></span> 
-        <span><strong id="description"></strong></span>
+        <span id="time"></span> 
          <span>Humidity: <strong id="humidity"></strong></span> 
          <span>Wind: <strong id="wind"></strong></span>
          </p>
@@ -35,15 +35,15 @@
       <div id="icon"></div>
        <div class="temp-unit">
         <div class="weather-app-temp" id="temperature"></div>
-        <div class="weather-app-unit">°C | °F</div>
+        <div class="weather-app-unit">°F</div>
       </div>
     </div>
 </section>
  <ul class="weather-forecast"  id="forecast"></ul>
     <footer class="source-code">
-        <p class="source-link">Open source code by
-        <a href="https://github.com/Jaime-Ginesky/weather-app-re" 
-           target="_blank">Jaime Ginesky</a></p>
+        <p class="source-link">Open source code by:</p>
+        <p><a href="https://github.com/Jaime-Ginesky/weather-app-re" 
+           target="_blank"> Jaime Ginesky</a></p>
    </footer>
 </div>
 <script src="src/index.js"></script>

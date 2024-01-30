@@ -125,7 +125,8 @@ footer {
 
  .weather-app-unit {
     font-size: .8em;
-    padding: 2em 0.1em;
+    font-weight: 800;
+    padding: 2.5em 0.1em;
     opacity: 70%;
  }
  /* .weather-forecast {
@@ -155,8 +156,10 @@ footer {
 .weather-forecast li {
     list-style: none;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: .1em;
+    width: 100vw;
 }
 
 .forecast-daily {
@@ -167,11 +170,13 @@ footer {
 }
 
 .weather-forecast-icon {
-    width: 2em;
-    height: 2em;
-    display: flex;
+    width: 5em;
+    height: 5em;
+    display: block;
+    margin: 0 auto;
+    /* display: flex;
     justify-content: center;
-    margin-left: 1em;
+    margin-left: 1.3em; */
 }
 
 .daily-temp {
