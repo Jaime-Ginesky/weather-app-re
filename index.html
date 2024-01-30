@@ -20,9 +20,8 @@
         <input type="submit" value="Search" class="search-form-button" />
     </form>
   </header>
-  <main>
-    <section class="weather-app-data">
-        <div>
+   <section class="weather-app-data">
+    <div>
      <h1 class="weather-app-city" id="city">Los Angeles</h1>
        <p class="weather-app-details">
         <span id="day"></span> 
@@ -34,12 +33,23 @@
         </div>
     <div class="weather-app-values"> 
       <div id="icon"></div>
-      <div class="weather-app-temp" id="temperature"></div>
-      <div class="weather-app-unit">°F</div>
+       <div class="temp-unit">
+        <div class="weather-app-temp" id="temperature"></div>
+        <div class="weather-app-unit">°C | °F</div>
+      </div>
     </div>
-  </div>
  </section>
- </main>
+ <section class="weather-forecast">
+    <ul class="forecast-days">
+        <li>Monday<a href="#">⛅️</a><span class="daily-temp"><span class="min-temp">58</span><span class="max-temp">72</span></span></li>
+        <li>Monday<a href="#">⛅️</a><p>58/72</p></li>
+        <li>Monday<a href="#">⛅️</a><p>58/72</p></li>
+        <li>Monday<a href="#">⛅️</a><p>58/72</p></li>
+        <li>Monday<a href="#">⛅️</a><p>58/72</p></li>
+        <li>Monday<a href="#">⛅️</a><p>58/72</p></li>
+    </ul>
+
+ </section>
     <footer class="source-code">
         <p class="source-link">Open source code by
         <a href="https://github.com/Jaime-Ginesky/weather-app-re" 
