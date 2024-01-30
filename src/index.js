@@ -8,10 +8,10 @@ function refreshWeather(response) {
     let windElement = document.querySelector("#wind");
     let timeElement = document.querySelector("#time");
     let date = new Date(response.data.time * 1000);
+    let iconElement = document.querySelector("#icon");
+     
     
-    console.log(response.data);
-    
-    
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
     timeElement.innerHTML = formatDate(date);
     windElement.innerHTML = `${response.data.wind.speed}mph`;
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
@@ -53,14 +53,14 @@ function formatDate(date) {
 
 function handleSearchSubmit(event) {
    event.preventDefault();
-   let searchInput  = document.querySelector("#search-form-input");
+   let searchInput = document.querySelector("#search-form-input");
 
    searchCity(searchInput.value);
 
 }
 
 
-let searchFormElement = document.querySelector("#search-form-submit");
+let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Los Angeles");

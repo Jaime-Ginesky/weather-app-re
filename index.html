@@ -17,7 +17,7 @@
     <h1 class="title-text">Forecast</h1>
     <form class="search-form" id="search-form">
         <input type="search" placeholder="Enter your city" required class="search-form-input" id="search-form-input" />
-        <input type="submit" value="Search" class="search-form-submit" id="search-form-submit" />
+        <input type="submit" value="Search" class="search-form-button" />
     </form>
   </header>
   <main>
@@ -27,18 +27,19 @@
        <p class="weather-app-details">
         <span id="day"></span> 
         <span><strong id="time"></strong></span> 
-        <span id="description"></span>
-        <br />
-         Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind"></strong>
+        <span><strong id="description"></strong></span>
+         <span>Humidity: <strong id="humidity"></strong></span> 
+         <span>Wind: <strong id="wind"></strong></span>
          </p>
         </div>
-    <div class="weather-app-values">    
-      <div class="weather-app-icon">⛅️</div>
+    <div class="weather-app-values"> 
+      <div id="icon"></div>
       <div class="weather-app-temp" id="temperature"></div>
       <div class="weather-app-unit">°F</div>
     </div>
-        </section>
-  </main>
+  </div>
+ </section>
+ </main>
     <footer class="source-code">
         <p class="source-link">Open source code by
         <a href="https://github.com/Jaime-Ginesky/weather-app-re" 
