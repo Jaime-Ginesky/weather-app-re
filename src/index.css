@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+   overflow-x: hidden;
+}
+
 body {
     background-color: var(--background-color);
     max-width: 100vw;
@@ -26,8 +30,7 @@ footer {
 
 .weather-app {
     background: rgb(157, 137, 159);
-    /* max-width: calc(2vw + 60em); */
-    margin: 4em auto;
+    margin: 0 auto;
     box-shadow: 0 30px 50 px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
     padding: 3em;
@@ -112,8 +115,6 @@ footer {
  .weather-app-values {
     display:flex;
     flex-direction: column-reverse;
-    /* justify-content: right; */
-    /* padding: 1em 0em; */
  }
 
  .weather-app-icon {
@@ -129,22 +130,6 @@ footer {
     padding: 2.5em 0.1em;
     opacity: 70%;
  }
- /* .weather-forecast {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    font-size: .1em;
- }
-
- .weather-forecast li {
-    list-style: none;
-    display:flex;
-    justify-content: center;
- }
-
- .weather-forecast .forecast-days-item {
-    margin-left: 5em;
- } */
 
 .weather-forecast {
    display: flex;
@@ -174,9 +159,6 @@ footer {
     height: 5em;
     display: block;
     margin: 0 auto;
-    /* display: flex;
-    justify-content: center;
-    margin-left: 1.3em; */
 }
 
 .daily-temp {
