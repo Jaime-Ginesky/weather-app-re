@@ -35,6 +35,8 @@ function formatDate(date) {
         "Saturday",
     ];
 
+    console.log(formatDate);
+
     let day = days[date.getDay()];
 
     if (minutes < 10) {

@@ -5,36 +5,48 @@
     --primary-color: rgb(52, 50, 48);
 }
 
+html {
+   overflow-x: hidden;
+   overflow-y: hidden;
+}
+
 * {
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
 body {
+   overflow-x: hidden;
+   overflow-y: hidden;
     background-color: var(--background-color);
-    display: block;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
 }
 
 header {
     border-bottom: 1px solid var(--primary-color);
-    padding: .1em;
+    padding-top: 3em;
 }
 
 footer {
     border-top: 1px solid var(--primary-color);
-    padding: 2em;
-}
-
-.wrapper {
-   overflow: hidden;
+    padding: 5.5em;
 }
 
 .weather-app {
-    max-width: 95vw;
-    background: rgb(157, 137, 159);
-    margin: 0 auto;
-    box-shadow: 0 30px 50 px rgba(65, 50, 100, 0.08);
-    border-radius: 16px;
+   /* width: 100vw;
+   height: 100%;
+   max-width: 100%; */
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=2b7996&c2=8d9e5a&gt=c&gd=dbr
+*/
+background: #2B7996;
+background: conic-gradient(from 135deg, #2B7996, #8D9E5A);
+    border: 1px solid var(--primary-color);
+    /* margin: 0 auto; */
+    /* box-shadow: 0 30px 50 px rgba(65, 50, 100, 0.08); */
+    /* border-radius: 16px; */
     padding:  0 1em;
     font-family: var(--primary-font-family);
     color:var(--primary-color);
@@ -54,8 +66,15 @@ footer {
 }
 
 .search-form-button {
-    background-color: var(--primary-color);
-    border-radius: 6px;
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=2b7996&c2=8d9e5a&gt=c&gd=dbr
+*/
+ background: #2B7996;
+background: conic-gradient(from 135deg, #2B7996, #8D9E5A); 
+
+border:1px solid #e2dbea;
+    border-radius: 3px;
     width: 6em;
     height: 2em;
     color: rgb(221, 233, 233);
@@ -85,7 +104,10 @@ footer {
  }
 
  .weather-app-city {
-    font-size: calc(2vw + .5em);
+   display: flex;
+   justify-content: center;
+    font-size: 2em;
+    padding: 1em;
  }
 
  .weather-app-data {
@@ -157,14 +179,13 @@ footer {
 }
 
 .weather-forecast-icon {
-    width: 4em;
-    height: 4em;
+    width: 2.5em;
+    height: 2.5em;
     display: block;
     margin: 0 auto;
 }
 
 .daily-temp {
-    /* padding: 1em; */
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -173,6 +194,24 @@ footer {
  .max-temp {
     padding: 0 1.5em;
     font-size: .1em;
+ }
+
+
+ @media (min-width: 798px) {
+
+   .weather-forecast-icon {
+      width: 8em;
+      height: 8em;
+   }
+
+   .min-temp,
+   .max-temp {
+      font-size: .6em;
+   }
+
+   .forecast-daily {
+      font-size: .8em;
+  }
  }
 
  
