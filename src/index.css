@@ -9,12 +9,9 @@
     box-sizing: border-box;
 }
 
-html {
-   overflow-x: hidden;
-}
-
 body {
     background-color: var(--background-color);
+    display: block;
     margin: 0 auto;
 }
 
@@ -28,13 +25,17 @@ footer {
     padding: 2em;
 }
 
+.wrapper {
+   overflow: hidden;
+}
+
 .weather-app {
     max-width: 95vw;
     background: rgb(157, 137, 159);
-    margin: 4em auto;
+    margin: 0 auto;
     box-shadow: 0 30px 50 px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
-    padding: 3em;
+    padding:  0 1em;
     font-family: var(--primary-font-family);
     color:var(--primary-color);
 }
@@ -144,8 +145,8 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: .1em;
-    width: 100vw;
+    padding: .2em;
+    width: 80vw;
 }
 
 .forecast-daily {
@@ -156,14 +157,14 @@ footer {
 }
 
 .weather-forecast-icon {
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
     display: block;
     margin: 0 auto;
 }
 
 .daily-temp {
-    padding: 1em;
+    /* padding: 1em; */
     display:flex;
     flex-direction: row;
     justify-content: center;
