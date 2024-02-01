@@ -12,39 +12,39 @@
     --btn-width: 6rem;
     --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
+ html {
+   overflow-x: hidden !important;
+   overflow-y: hidden !important;
+ }
 
+   
 
-
-html {
-   overflow-x: hidden;
-   overflow-y: hidden;
-}
 
 * {
    border: 1px solid red !important;
-   margin: 0 auto;
     box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
 }
 
-body {
-    width: 100vw;
-    max-height: 100vh;
-    max-width: 100%;
-}
 
 header {
     border-bottom: 1px solid var(--color-brand);
-    padding-top: 4em;
+    padding-top: 2em;
+}
+
+   
+.weather-app { 
+   background: #070708;
+    font-family: var(--primary-font-family);
+    width: 100vw;
+    max-width: 100%;
 }
 
 footer {
    display: flex;
-   padding: 4.5em;
-}
-   
-.weather-app { 
-   background: #070708;
-    font-family: var(--primary-font-family)
+   width: 100% !important;
+   padding: 5.8em;
 }
 
 form {
@@ -105,6 +105,7 @@ form {
     text-decoration: none;
     display: flex;
     justify-content: center;
+    padding-top: 4em;
 }
 
 .source-code a:hover {
@@ -163,7 +164,7 @@ form {
 
  .weather-app-values {
     display:flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
  }
 
  .weather-app-icon {
@@ -180,10 +181,9 @@ form {
 
 .weather-forecast {
    display: flex;
-   flex-direction: row;
    justify-content: center;
    align-content: center;
-   padding: 2em 3em;
+   /* padding: 2em 3em; */
 }
 .weather-forecast li {
     list-style: none;
@@ -219,7 +219,7 @@ form {
  .max-temp {
     padding: 0 1.5em;
     font-size: .1em;
- }
+ } 
 
 
  @media (min-width: 798px) {
