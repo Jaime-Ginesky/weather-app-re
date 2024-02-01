@@ -17,7 +17,7 @@ function refreshWeather(response) {
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     descriptionElement.innerHTML = response.data.condition.description;
     cityElement.innerHTML = response.data.city;
-    temperatureElement.innerHTML = Math.round(temperature);
+    temperatureElement.innerHTML = `${Math.round(temperature)}°F`;
 
     getForecast(response.data.city);
 }
@@ -35,7 +35,6 @@ function formatDate(date) {
         "Saturday",
     ];
 
-    console.log(formatDate);
 
     let day = days[date.getDay()];
 
@@ -86,11 +85,12 @@ function displayForecast(response) {
           forecastHtml +
    `
       <li> 
-      <span class="forecast-daily">${formatDay(day.time)}</span>
-      <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>   
+      <span class="forecast-daily">${formatDay(day.time)}</span> 
       <span class="daily-temp">
       <span class="max-temp"><strong>${Math.round(day.temperature.maximum)}°</strong></span>
       <span class="min-temp">${Math.round(day.temperature.minimum)}°</span>
+      </span>
+      <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>  
       </li>
      `;
         };

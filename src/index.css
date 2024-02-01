@@ -1,9 +1,18 @@
 :root {
     --primary-font-family: 'Poppins', sans-serif;; 
-    --background-color:  #e2dbea;
-    --pop-text-color: rgb(100, 62, 134);
-    --primary-color: rgb(52, 50, 48);
+
+    --rad: .7rem;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #c7d265;
+    --font-fam: 'Lato', sans-serif;
+    --height: 2rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
+
+
 
 html {
    overflow-x: hidden;
@@ -18,81 +27,92 @@ html {
 body {
    overflow-x: hidden;
    overflow-y: hidden;
-    background-color: var(--background-color);
     width: 100vw;
     height: 100vh;
 }
 
 header {
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--color-brand);
     padding-top: 3em;
 }
 
 footer {
-    border-top: 1px solid var(--primary-color);
-    padding: 5.5em;
+   height: 100vh;
+    padding: 7em;
 }
-
-.weather-app {
-   /* width: 100vw;
-   height: 100%;
-   max-width: 100%; */
-    /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=2b7996&c2=8d9e5a&gt=c&gd=dbr
-*/
-background: #2B7996;
-background: conic-gradient(from 135deg, #2B7996, #8D9E5A);
+   
+.weather-app { 
+   background: #070708;
     border: 1px solid var(--primary-color);
-    /* margin: 0 auto; */
-    /* box-shadow: 0 30px 50 px rgba(65, 50, 100, 0.08); */
-    /* border-radius: 16px; */
     padding:  0 1em;
     font-family: var(--primary-font-family);
     color:var(--primary-color);
 }
 
-.search-form {
-    padding-bottom: 1em;
-}
-
-.search-form-input {
-    background: var(--background-color);
-    border-radius: 8px;
-    width: 15em;
-    height: 2em;
-    color: var(--pop-text-color);
-    outline: none;
-}
-
-.search-form-button {
-    /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=2b7996&c2=8d9e5a&gt=c&gd=dbr
-*/
- background: #2B7996;
-background: conic-gradient(from 135deg, #2B7996, #8D9E5A); 
-
-border:1px solid #e2dbea;
-    border-radius: 3px;
-    width: 6em;
-    height: 2em;
-    color: rgb(221, 233, 233);
-    letter-spacing: 1px;
-}
+form {
+      position: relative;
+      width: 20rem;
+      background: var(--color-brand);
+      border-radius: var(--rad);
+    }
+    input, button {
+      height: var(--height);
+      font-family: var(--font-fam);
+      border: 0;
+      color: var(--color-dark);
+      font-size: 1rem;
+    }
+    input[type="search"] {
+      outline: none;
+      width: 100%;
+      background: var(--color-light);
+      padding: 0 1.6rem;
+      border-radius: var(--rad);
+      /* appearance: none;  */
+      transition: all var(--dur) var(--bez);
+      transition-property: width, border-radius;
+      z-index: 1;
+      position: relative;
+    }
+    button {
+      display: none; 
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: var(--btn-width);
+      font-weight: bold;
+      background: var(--color-brand);
+      border-radius: 0 var(--rad) var(--rad) 0;
+    }
+    input:not(:placeholder-shown) {
+      border-radius: var(--rad) 0 0 var(--rad);
+      width: calc(100% - var(--btn-width));
+      + button {
+        display: block;
+      }
+    }
+    label {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 0;
+      border: 0;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+} 
 
 .source-code a {
-    color:var(--primary-color);
-    font-size: .5em;
+    color:var(--color-light);
+    font-size: .1em;
     text-decoration: none;
 }
 
 .source-code a:hover {
-     color:azure;
+     color:#27bab0fe;
 }  
  .source-code p {
-    color: var(--primary-color);
-    font-size: .5em;
+    color: var(--color-light);
+    font-size: .1em;
     display: flex;
     justify-content: center;
  }
@@ -101,14 +121,20 @@ border:1px solid #e2dbea;
     display: flex;
     justify-content: center;
     padding-bottom: .7em;
+    color: #d4e3b1fe;
+    letter-spacing: .3em;
+    font-size: 1.5em;
  }
-
+ 
+ 
  .weather-app-city {
    display: flex;
+   padding-top: 2em;;
    justify-content: center;
-    font-size: 2em;
-    padding: 1em;
- }
+    color: var(--color-brand);
+    letter-spacing: .3em;
+    font-size: 2.2em;
+}
 
  .weather-app-data {
     display: flex;
@@ -116,24 +142,34 @@ border:1px solid #e2dbea;
  }
 
  .weather-app-temp {
-    display: flex;
-    padding: .2em 0 0 .3em;
+    display: block;
     font-weight: 600;
-    font-size: 4em;
+    font-size: 6em;
+    padding-top: .5em;
  }
 
  .temp-unit {
-    display:flex;
-    flex: 1 1 auto;
+   margin: 0 auto;
+    /* display:flex;
+    flex: 1 1 auto; */
+    color: var(--color-brand);
+    text-align: center;
  }
+
+ .weather-app-unit {
+   font-size: 1em;
+   font-weight: 800;
+   /* margin-right: 10em;
+   padding-top: 2em; */
+}
 
  .weather-app-details {
     display: flex;
     flex-direction: column;
     font-size: .8em;
-    opacity: 70%;
     line-height: 2em;
-    padding-left: 1em;
+    padding-top: 5em;
+    color:var(--color-light);
  }
 
  .weather-app-values {
@@ -147,20 +183,18 @@ border:1px solid #e2dbea;
     margin: 0 1em 6em 2em;
  }
 
-
- .weather-app-unit {
-    font-size: .8em;
-    font-weight: 800;
-    padding: 2.5em 0.1em;
-    opacity: 70%;
+ img  {
+   max-height: 20vh;
+   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
  }
+
 
 .weather-forecast {
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-content: center;
-   padding-right: 3em;
+   padding: 3em 3em;
 }
 .weather-forecast li {
     list-style: none;
@@ -176,6 +210,7 @@ border:1px solid #e2dbea;
     padding: .1em;
     display: flex;
     justify-content: center;
+    color: var(--color-light);
 }
 
 .weather-forecast-icon {
@@ -189,6 +224,7 @@ border:1px solid #e2dbea;
     display:flex;
     flex-direction: row;
     justify-content: center;
+    color: var(--color-light);
  }
  .min-temp,
  .max-temp {
@@ -198,6 +234,14 @@ border:1px solid #e2dbea;
 
 
  @media (min-width: 798px) {
+
+   .weather-app-city {
+       font-size: 4em;
+   }
+
+   .weather-app-details {
+      font-size: .8em;
+   }
 
    .weather-forecast-icon {
       width: 8em;
