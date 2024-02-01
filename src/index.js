@@ -17,8 +17,7 @@ function refreshWeather(response) {
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     descriptionElement.innerHTML = response.data.condition.description;
     cityElement.innerHTML = response.data.city;
-    temperatureElement.innerHTML = `${Math.round(temperature)}°F`;
-
+    temperatureElement.innerHTML = `${Math.round(temperature)}`;
     getForecast(response.data.city);
 }
 
