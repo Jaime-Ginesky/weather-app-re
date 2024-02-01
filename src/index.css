@@ -15,19 +15,18 @@
 
 
 
-html {
+/* html {
    overflow-x: hidden;
    overflow-y: hidden;
-}
+} */
 
 * {
-    margin: 0 auto;
+   margin: 0 auto;
     box-sizing: border-box;
 }
 
 body {
-   display:block;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -37,7 +36,6 @@ header {
 }
 
 footer {
-   height: auto;
     padding: 5em;
 }
    
@@ -131,14 +129,14 @@ form {
 }
 
  .weather-app-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: block;
  }
 
 
  .temp-unit {
    display:flex;
+   flex-direction: row;
+   justify-items:stretch;
  }
 
 .weather-app-temp {
@@ -148,7 +146,6 @@ form {
  }
 
   .weather-app-unit {
-   margin-top: .8em;
    font-size: 1em;
    color:var(--color-pop);
 }
