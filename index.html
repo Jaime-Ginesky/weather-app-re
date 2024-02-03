@@ -12,41 +12,39 @@
     <title>Weather App</title>
 </head>
 <body>
-  <div class="weather-app">
-  <header>
+  <main class="weather-app">
     <h1 class="title-text">LOCAL FORECAST</h1>
     <form id="search-form" role="search">
       <input id="search-form-input" type="search" placeholder="Enter city..." autofocus required />
       <button type="submit">Go</button>    
     </form>
-  </header>
    <section class="weather-app-data">
-    <div class="weather-app-city" id="city">Los Angeles</div>
-    <div class="temp-unit">
-      <div class="weather-app-temp" id="temperature"></div>
-      <div class="weather-app-unit">°F</div>
+    <div class="temp-box">
+     <div class="weather-app-city" id="city">Los Angeles</div>
+      <div class="temp-unit">
+       <div class="weather-app-temp" id="temperature"></div>
+       <div class="weather-app-unit">°F</div>
+       </div>
       </div>
-      </section>
-    <div>
-       <p class="weather-app-details">
+       <span class="weather-app-details">
         <span id="description"></span>
         <span id="day"></span> 
         <span id="time"></span> 
          <span>Humidity: <strong id="humidity"></strong></span> 
          <span>Wind: <strong id="wind"></strong></span>
-         </p>
-    </div>
     <div class="weather-app-values"> 
       <div id="icon"></div>
     </div>
+    </span>
+  </section>
 <section>
    <ul class="weather-forecast"  id="forecast"></ul>
 </section>
    <footer class="source-code">
-     <a href="https://github.com/Jaime-Ginesky/weather-app-re" 
-           target="_blank">Open source code </a>
+     <span class="footer-text"><a href="https://github.com/Jaime-Ginesky/weather-app-re" 
+           target="_blank">Open source code</a> <p>by Jaime Ginesky</p></span>
    </footer>
-  </div>
+  </main>
 <script src="src/index.js"></script>
 </body>
 </html>

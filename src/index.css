@@ -6,73 +6,66 @@
     --color-dark: #2f2f2f;
     --color-light: #fff;
     --color-brand: #9665d2;
-    --color-pop: #E0A014;
+    --color-pop: #da91e2;
     --font-fam: 'Lato', sans-serif;
     --height: 2rem;
     --btn-width: 6rem;
     --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
- html {
-   overflow-x: hidden !important;
-   overflow-y: hidden !important;
- }
 
-   
-
-
-* {
-   border: 1px solid red !important;
+   * {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0;
 }
 
 
-header {
-    border-bottom: 1px solid var(--color-brand);
-    padding-top: 2em;
+body {
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
 }
 
    
 .weather-app { 
+   overflow: scroll;
+   height: 100vh;
+   width: 100%;
    background: #070708;
     font-family: var(--primary-font-family);
-    width: 100vw;
-    max-width: 100%;
 }
 
 footer {
-   display: flex;
-   width: 100% !important;
-   padding: 5.8em;
+   display: block;
+   margin: 0 auto;
+   padding: 1.5em;
 }
 
 form {
       position: relative;
-      width: 20rem;
+      max-width: 15rem;
       background: var(--color-brand);
       border-radius: var(--rad);
     }
-    input, button {
+
+input, button {
       height: var(--height);
       font-family: var(--font-fam);
       border: 0;
       color: var(--color-dark);
       font-size: 1rem;
     }
-    input[type="search"] {
+input[type="search"] {
       outline: none;
       width: 100%;
       background: var(--color-light);
       padding: 0 1.6rem;
       border-radius: var(--rad);
-      /* appearance: none;  */
       transition: all var(--dur) var(--bez);
       transition-property: width, border-radius;
       z-index: 1;
       position: relative;
     }
-    button {
+button {
       display: none; 
       position: absolute;
       top: 0;
@@ -82,14 +75,14 @@ form {
       background: var(--color-brand);
       border-radius: 0 var(--rad) var(--rad) 0;
     }
-    input:not(:placeholder-shown) {
+input:not(:placeholder-shown) {
       border-radius: var(--rad) 0 0 var(--rad);
       width: calc(100% - var(--btn-width));
       + button {
         display: block;
       }
     }
-    label {
+label {
       position: absolute;
       clip: rect(1px, 1px, 1px, 1px);
       padding: 0;
@@ -99,13 +92,23 @@ form {
       overflow: hidden;
 } 
 
-.source-code a {
+.source-code {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+}
+.source-code .footer-text {
+   display: flex;
+   flex-wrap: nowrap;
+}
+
+.source-code a,
+.source-code p {
     color:var(--color-light);
     font-size: .1em;
     text-decoration: none;
     display: flex;
-    justify-content: center;
-    padding-top: 4em;
+    padding: 1.6em 0;
 }
 
 .source-code a:hover {
@@ -114,8 +117,8 @@ form {
 
  .title-text {
     display: flex;
+    padding: 1.5em;
     justify-content: center;
-    padding-bottom: .7em;
     color: var(--color-pop);
     letter-spacing: .3em;
     font-size: 1.2em;
@@ -124,32 +127,38 @@ form {
  
  .weather-app-city {
    display: flex;
-   padding-top: .5em;;
    justify-content: center;
+   padding-top: 2em;
    color: var(--color-pop);
-    letter-spacing: .3em;
-    font-size: 2.2em;
+    letter-spacing: .1em;
+    font-size: 2em;
     font-weight: 600;
 }
 
  .weather-app-data {
-    display: block;
+    display: flex;
+    padding-top: 2em;
  }
-
+ 
+ .temp-box {
+   padding: 0;
+ }
 
  .temp-unit {
    display:flex;
-   flex-direction: row;
+   padding-top: 3em;
  }
 
 .weather-app-temp {
    font-weight: 600;
-   font-size: 5em;
+   margin-left: 1em;
+   font-size: 4em;
    color: var(--color-pop);
  }
 
   .weather-app-unit {
    font-size: 1em;
+   margin: 1em 5em 0 .1em;
    color:var(--color-pop);
 }
 
@@ -158,7 +167,7 @@ form {
     flex-direction: column;
     font-size: .8em;
     line-height: 2em;
-    padding-top: 2em;
+    padding: 5.5em 1.5em;
     color:var(--color-light);
  }
 
@@ -183,6 +192,8 @@ form {
    display: flex;
    justify-content: center;
    align-content: center;
+   flex-direction: row;
+   padding: 1.4em 1em;
    /* padding: 2em 3em; */
 }
 .weather-forecast li {
@@ -190,13 +201,12 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: .2em;
-    width: 80vw;
+    padding: .5em;
+    width: 100%;
 }
 
 .forecast-daily {
     font-size: .1em;
-    padding: .1em;
     display: flex;
     justify-content: center;
     color: var(--color-light);
@@ -205,21 +215,21 @@ form {
 .weather-forecast-icon {
     width: 2.5em;
     height: 2.5em;
-    display: block;
-    margin: 0 auto;
 }
 
 .daily-temp {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    color: var(--color-light);
  }
+
  .min-temp,
  .max-temp {
-    padding: 0 1.5em;
+   color: var(--color-light);
     font-size: .1em;
- } 
+    padding: 0 2em;
+ }
+
 
 
  @media (min-width: 798px) {
