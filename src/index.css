@@ -114,7 +114,7 @@ label {
     font-size: .1em;
     text-decoration: none;
     display: flex;
-    padding: 1.6em .6em;
+    padding: 1.6em .3em;
 }
 
 .source-code a:hover {
