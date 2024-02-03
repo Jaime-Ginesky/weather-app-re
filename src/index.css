@@ -13,6 +13,12 @@
     --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
 
+html {
+   padding: 0px;
+   height: 100%;
+   width: 100%;
+}
+
    * {
     box-sizing: border-box;
     margin: 0 auto;
