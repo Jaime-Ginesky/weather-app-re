@@ -177,6 +177,10 @@ label {
     color:var(--color-light);
  }
 
+ .upper-case {
+   text-transform: capitalize;
+ }
+
  .weather-app-values {
     display:flex;
     flex-direction: column;
@@ -200,7 +204,6 @@ label {
    align-content: center;
    flex-direction: row;
    padding: calc(2vw + .5em);
-   /* padding: 2em 3em; */
 }
 .weather-forecast li {
     list-style: none;
@@ -244,13 +247,13 @@ label {
       padding: 5em;
    }
    .weather-app-city {
-       font-size: 3em;
+       font-size: 5em;
        font-weight: 800;
+       padding: .5em;
    }
 
    .weather-app-details {
-      font-size: .8em;
-      padding-top: .5em;
+      font-size: 1em;
    }
 
    .weather-forecast-icon {
@@ -260,8 +263,15 @@ label {
 
 
   .weather-app-temp {
-      font-size: 4em;
+      font-size: 6em;
+      margin-left: 2.4em;
    }
+
+   .weather-app-unit {
+      font-size: 1.2em;
+      margin: 1.7em 17rem 0 0; 
+   }
+
 
    .min-temp,
    .max-temp {
