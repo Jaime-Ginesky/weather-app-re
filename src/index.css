@@ -114,7 +114,7 @@ label {
     font-size: .1em;
     text-decoration: none;
     display: flex;
-    padding: 1.6em 0;
+    padding: 1.6em .6em;
 }
 
 .source-code a:hover {
@@ -199,7 +199,7 @@ label {
    justify-content: center;
    align-content: center;
    flex-direction: row;
-   padding: 1.4em 1em;
+   padding: calc(2vw + .5em);
    /* padding: 2em 3em; */
 }
 .weather-forecast li {
@@ -233,7 +233,7 @@ label {
  .max-temp {
    color: var(--color-light);
     font-size: .1em;
-    padding: 0 2em;
+    padding: 0 .3em;
  }
 
 
